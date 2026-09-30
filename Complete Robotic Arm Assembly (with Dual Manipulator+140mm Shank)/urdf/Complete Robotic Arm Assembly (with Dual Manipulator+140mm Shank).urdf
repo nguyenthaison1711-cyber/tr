@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0,0138376682416377 -0,000430326403464812 0,026921735658949"
+        rpy="0 0 0" />
+      <mass
+        value="0,166180760231011" />
+      <inertia
+        ixx="4,66487557674931E-05"
+        ixy="-2,12332881384419E-06"
+        ixz="5,18366560968728E-07"
+        iyy="5,21460730335825E-05"
+        iyz="2,53677004797857E-07"
+        izz="8,35538203677663E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0,298039215686275 0,298039215686275 0,298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="J1_Link">
+    <inertial>
+      <origin
+        xyz="-0,000837857429435721 -9,47265409280626E-05 0,0345333465694788"
+        rpy="0 0 0" />
+      <mass
+        value="0,230848979103603" />
+      <inertia
+        ixx="8,40375582744886E-05"
+        ixy="-3,17898202255182E-08"
+        ixz="5,79524575977471E-06"
+        iyy="9,48052513721982E-05"
+        iyz="1,39321411858817E-07"
+        izz="6,65127490060879E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/J1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0,298039215686275 0,298039215686275 0,298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/J1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0,0612"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="J1_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1,57"
+      upper="1,57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="J2_Link">
+    <inertial>
+      <origin
+        xyz="0,0780590518145349 0,0201269623130214 0,001372284045366"
+        rpy="0 0 0" />
+      <mass
+        value="0,0821318669642137" />
+      <inertia
+        ixx="8,35750065027446E-06"
+        ixy="-1,14800038824188E-05"
+        ixz="1,67406605767699E-06"
+        iyy="0,000158607902157853"
+        iyz="1,63677194097108E-07"
+        izz="0,000161600843685928" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/J2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0,909803921568627 0,443137254901961 0,0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/J2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0,069"
+      rpy="1,5708 -0,87266 0" />
+    <parent
+      link="J1_Link" />
+    <child
+      link="J2_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1,57"
+      upper="1,57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="J3_Link">
+    <inertial>
+      <origin
+        xyz="0,0559417604715907 0,0068827392760562 -0,000256790196295764"
+        rpy="0 0 0" />
+      <mass
+        value="0,0441396638628059" />
+      <inertia
+        ixx="2,98567910087589E-06"
+        ixy="1,12207729293299E-05"
+        ixz="9,97907721814858E-07"
+        iyy="0,00011959359836148"
+        iyz="-8,4229132536284E-08"
+        izz="0,000121526959952064" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/J3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0,909803921568627 0,443137254901961 0,0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/J3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3_Joint"
+    type="continuous">
+    <origin
+      xyz="0,13962 0,010362 0,00125"
+      rpy="0 0 -1,7453" />
+    <parent
+      link="J2_Link" />
+    <child
+      link="J3_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1,57"
+      upper="1,57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="J4_Link">
+    <inertial>
+      <origin
+        xyz="-0,0234748024157513 -0,00895772957106128 -3,50501497964339E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0,0186105408082886" />
+      <inertia
+        ixx="5,33737541810374E-06"
+        ixy="-4,2386506528991E-07"
+        ixz="-6,36772815303408E-12"
+        iyy="5,90425343258994E-06"
+        iyz="1,90969763715846E-12"
+        izz="3,6494576655082E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/J4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0,298039215686275 0,298039215686275 0,298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Complete Robotic Arm Assembly (with Dual Manipulator+140mm Shank)/meshes/J4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4_Joint"
+    type="fixed">
+    <origin
+      xyz="0,16672 0,0097368 -0,00074996"
+      rpy="0 0 0,05236" />
+    <parent
+      link="J3_Link" />
+    <child
+      link="J4_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
